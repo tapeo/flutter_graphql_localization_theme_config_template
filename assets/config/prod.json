@@ -1,0 +1,5 @@
+{
+    "endpoint": "https://hasura-jzzfpsfl4a-ew.a.run.app/v1/graphql",
+    "webSocketEndpoint": "wss://hasura-jzzfpsfl4a-ew.a.run.app/v1/graphql",
+    "admin_uid": "MhqP1drXTWbHOL0CtX21GKjV2Jl2"
+}

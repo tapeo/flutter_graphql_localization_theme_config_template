@@ -1,0 +1,5 @@
+{
+    "endpoint": "https://massimobanchell.herokuapp.com/v1/graphql",
+    "webSocketEndpoint": "wss://massimobanchell.herokuapp.com/v1/graphql",
+    "admin_uid": "rCgVGi8s2SX2RKrWMw6BxgMRnG82"
+}
