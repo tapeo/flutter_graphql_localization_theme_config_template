@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_graphql_localization_theme_config_template/app/ui/app.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:flutter_graphql_localization_theme_config_template/main.dart';

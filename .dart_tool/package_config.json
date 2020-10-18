@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "apple_sign_in",
+      "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/apple_sign_in-0.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.5.0-nullsafety.1",
       "packageUri": "lib/",
@@ -158,6 +164,12 @@
       "languageVersion": "2.1"
     },
     {
+      "name": "firebase_messaging",
+      "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-7.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "firebase_storage",
       "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-4.0.1",
       "packageUri": "lib/",
@@ -168,6 +180,12 @@
       "rootUri": "file:///Users/matteo/development/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.10"
+    },
+    {
+      "name": "flutter_auth_buttons",
+      "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_auth_buttons-0.10.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
     },
     {
       "name": "flutter_test",
@@ -186,6 +204,24 @@
       "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "google_sign_in",
+      "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.5.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "google_sign_in_platform_interface",
+      "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_platform_interface-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "google_sign_in_web",
+      "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.9.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
     },
     {
       "name": "gql",
@@ -246,6 +282,12 @@
       "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/mime-0.9.7",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "nested",
+      "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/nested-0.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
     },
     {
       "name": "overlay_support",
@@ -312,6 +354,12 @@
       "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/process-3.0.13",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///Users/matteo/development/flutter/.pub-cache/hosted/pub.dartlang.org/provider-4.3.2+2",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "quiver",
@@ -452,7 +500,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-10-18T10:17:43.850383Z",
+  "generated": "2020-10-18T19:29:29.159881Z",
   "generator": "pub",
   "generatorVersion": "2.10.1"
 }

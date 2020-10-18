@@ -9,15 +9,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  apple_sign_in: ^0.1.0
   cloud_functions: ^0.6.0+1
   cupertino_icons: ^1.0.0
   firebase_auth: ^0.18.1+2
   firebase_core: ^0.5.0+1
+  firebase_messaging: ^7.0.3
   firebase_storage: ^4.0.1
+  flutter_auth_buttons: ^0.10.0
   font_awesome_flutter: ^8.10.0
+  google_sign_in: ^4.5.5
   graphql_flutter: ^3.1.0
+  http: ^0.12.2
   intl: ^0.16.1
   overlay_support: ^1.0.5
+  provider: ^4.3.2+2
   shared_preferences: ^0.5.12+2
   timeago: ^2.0.27
 
@@ -33,7 +39,7 @@ flutter:
     - assets/i18n/it.json
     - assets/i18n/en.json
 
-  fonts:
-    - family: Pacifico
-      fonts:
-        - asset: assets/fonts/Pacifico-Regular.ttf
+  # fonts:
+  #   - family: Pacifico
+  #     fonts:
+  #       - asset: assets/fonts/Pacifico-Regular.ttf

@@ -1,17 +1,19 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_graphql_localization_theme_config_template/app/provider/auth_provider.dart';
+import 'package:flutter_graphql_localization_theme_config_template/app/ui/app.dart';
+import 'package:flutter_graphql_localization_theme_config_template/app/ui/login.dart';
 import 'package:flutter_graphql_localization_theme_config_template/app_config.dart';
 import 'package:flutter_graphql_localization_theme_config_template/app_localizations.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_graphql_localization_theme_config_template/theme/theme.dart';
-import 'package:flutter_graphql_localization_theme_config_template/ui/app_view.dart';
-import 'package:flutter_graphql_localization_theme_config_template/ui/login/login_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:timeago/timeago.dart' as timeago;
@@ -27,10 +29,6 @@ Future<void> main({String env}) async {
 
   await Firebase.initializeApp();
 
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-
-  logged = prefs.getBool("logged") ?? false;
-
   await initializeDateFormatting();
 
   FlutterError.onError = (FlutterErrorDetails details) {
@@ -41,7 +39,10 @@ Future<void> main({String env}) async {
     }
   };
 
-  runApp(AppContainer());
+  runApp(ChangeNotifierProvider<AuthProvider>(
+    child: AppContainer(),
+    create: (context) => AuthProvider(),
+  ));
 }
 
 class AppContainer extends StatelessWidget {
@@ -57,7 +58,7 @@ class AppContainer extends StatelessWidget {
 
     return OverlaySupport(
       child: MaterialApp(
-        title: "Studio Legale Banchelli",
+        title: 'flutter_graphql_localization_theme_config_template',
         builder: (context, child) {
           return ScrollConfiguration(
             behavior: kIsWeb ? NoGlow() : ScrollBehavior(),
@@ -65,33 +66,25 @@ class AppContainer extends StatelessWidget {
           );
         },
         debugShowCheckedModeBanner: false,
-        home: AppWithStatusColor(),
         theme: kLightGalleryTheme,
         darkTheme: kLightGalleryTheme,
+        home: app(context),
       ),
     );
   }
-}
 
-class AppWithStatusColor extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    Widget widget;
+  Widget app(BuildContext context) {
+    return Consumer<AuthProvider>(
+      builder: (context, authProvider, child) {
+        User user = authProvider.getUser;
 
-    print("logged: $logged");
-
-    if (logged) {
-      widget = AppView();
-    } else {
-      widget = LoginView();
-    }
-
-    if (!kIsWeb && Platform.isIOS) {
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-          statusBarColor: Colors.white, statusBarBrightness: Brightness.dark));
-    }
-
-    return widget;
+        if (user != null) {
+          return App();
+        } else {
+          return Login();
+        }
+      },
+    );
   }
 }
 
